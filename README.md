@@ -4,10 +4,6 @@ A C++ project repository dedicated to CPU-based multithreaded computing for imag
 
 ---
 
-## 📁 Project Structure
-parallel-computing-and-multimedia-processing/ │ ├── CMakeLists.txt # Shared build config for all labs ├── README.md # You are here ├── .gitignore # Ignore binaries, output, etc. │ ├── data/ # Shared video/image inputs │ └── your_video.mp4 │ ├── output/ # Global output directory │ └── lab1/ │ └── processed_video.avi │ ├── sis/ # Labs folder │ ├── lab1/ # Lab 1: Variant 2 CPU processing │ │ └── main.cpp │ └── lab2/ # Future labs
-
----
 
 ## 🚀 Lab 1: Video Pixel Intensity Highlighting (Variant 2)
 
