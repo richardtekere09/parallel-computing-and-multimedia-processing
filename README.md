@@ -37,8 +37,8 @@ Process a video frame-by-frame to:
 brew install opencv
 export PKG_CONFIG_PATH="/opt/homebrew/opt/opencv/lib/pkgconfig"
 
----
-## **🔧 Step 2: Compile with CMake**
+##**🔧 Step 2: Compile with CMake**
+
 mkdir build && cd build
 cmake ..
 make
