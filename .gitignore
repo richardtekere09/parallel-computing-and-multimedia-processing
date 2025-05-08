@@ -1,0 +1,5 @@
+output/
+*.avi
+*.mov
+*.png
+.DS_Store
