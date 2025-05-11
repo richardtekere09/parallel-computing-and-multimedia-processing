@@ -1,4 +1,8 @@
 output/
 *.avi
 *.mov
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b69c05 (finalising)
 .DS_Store
