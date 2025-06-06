@@ -62,7 +62,7 @@ def run_opencl(input_path, output_path, ctx, queue, prg):
 
 
 def main():
-    input_path = "data/lab2.mov"  # Replace with your local video file path
+    input_path = "data/lab2.mov" 
     output_dir = os.path.join("output", "lab2")
     os.makedirs(output_dir, exist_ok=True)
 

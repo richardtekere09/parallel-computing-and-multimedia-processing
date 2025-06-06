@@ -1,0 +1,248 @@
+Starting analysis with 2 MPI processes
+Fetching main page: https://en.wikipedia.org/wiki/Provinces_of_Indonesia
+Found 46 potential province links
+Total provinces to analyze: 38
+Distribution: [19, 19]
+Process 0: Received 19 links to process
+Process 0: Analyzing 1/19 - https://en.wikipedia.org/wiki/Aceh
+Analyzing: https://en.wikipedia.org/wiki/Aceh
+Process 1: Received 19 links to process
+Process 1: Analyzing 1/19 - https://en.wikipedia.org/wiki/West_Kalimantan
+Analyzing: https://en.wikipedia.org/wiki/West_Kalimantan
+Process 0: Analyzing 2/19 - https://en.wikipedia.org/wiki/Banda_Aceh
+Analyzing: https://en.wikipedia.org/wiki/Banda_Aceh
+Process 1: Analyzing 2/19 - https://en.wikipedia.org/wiki/Kalimantan
+Analyzing: https://en.wikipedia.org/wiki/Kalimantan
+Process 0: Analyzing 3/19 - https://en.wikipedia.org/wiki/Sumatra
+Analyzing: https://en.wikipedia.org/wiki/Sumatra
+Process 1: Analyzing 3/19 - https://en.wikipedia.org/wiki/Central_Kalimantan
+Analyzing: https://en.wikipedia.org/wiki/Central_Kalimantan
+Process 0: Analyzing 4/19 - https://en.wikipedia.org/wiki/North_Sumatra
+Analyzing: https://en.wikipedia.org/wiki/North_Sumatra
+Process 1: Analyzing 4/19 - https://en.wikipedia.org/wiki/South_Kalimantan
+Analyzing: https://en.wikipedia.org/wiki/South_Kalimantan
+Process 0: Analyzing 5/19 - https://en.wikipedia.org/wiki/West_Sumatra
+Analyzing: https://en.wikipedia.org/wiki/West_Sumatra
+Process 1: Analyzing 5/19 - https://en.wikipedia.org/wiki/East_Kalimantan
+Analyzing: https://en.wikipedia.org/wiki/East_Kalimantan
+Process 1: Analyzing 6/19 - https://en.wikipedia.org/wiki/North_Kalimantan
+Analyzing: https://en.wikipedia.org/wiki/North_Kalimantan
+Process 0: Analyzing 6/19 - https://en.wikipedia.org/wiki/Jambi_(city)
+Analyzing: https://en.wikipedia.org/wiki/Jambi_(city)
+Process 1: Analyzing 7/19 - https://en.wikipedia.org/wiki/North_Sulawesi
+Analyzing: https://en.wikipedia.org/wiki/North_Sulawesi
+Process 0: Analyzing 7/19 - https://en.wikipedia.org/wiki/South_Sumatra
+Analyzing: https://en.wikipedia.org/wiki/South_Sumatra
+Process 1: Analyzing 8/19 - https://en.wikipedia.org/wiki/Sulawesi
+Analyzing: https://en.wikipedia.org/wiki/Sulawesi
+Process 0: Analyzing 8/19 - https://en.wikipedia.org/wiki/Bengkulu_(city)
+Analyzing: https://en.wikipedia.org/wiki/Bengkulu_(city)
+Process 1: Analyzing 9/19 - https://en.wikipedia.org/wiki/Central_Sulawesi
+Analyzing: https://en.wikipedia.org/wiki/Central_Sulawesi
+Process 0: Analyzing 9/19 - https://en.wikipedia.org/wiki/Jakarta
+Analyzing: https://en.wikipedia.org/wiki/Jakarta
+Process 1: Analyzing 10/19 - https://en.wikipedia.org/wiki/South_Sulawesi
+Analyzing: https://en.wikipedia.org/wiki/South_Sulawesi
+Process 0: Analyzing 10/19 - https://en.wikipedia.org/wiki/Central_Jakarta
+Analyzing: https://en.wikipedia.org/wiki/Central_Jakarta
+Process 1: Analyzing 11/19 - https://en.wikipedia.org/wiki/Southeast_Sulawesi
+Analyzing: https://en.wikipedia.org/wiki/Southeast_Sulawesi
+Process 0: Analyzing 11/19 - https://en.wikipedia.org/wiki/East_Jakarta
+Analyzing: https://en.wikipedia.org/wiki/East_Jakarta
+Process 1: Analyzing 12/19 - https://en.wikipedia.org/wiki/Gorontalo_(province)
+Analyzing: https://en.wikipedia.org/wiki/Gorontalo_(province)
+Process 0: Analyzing 12/19 - https://en.wikipedia.org/wiki/Java
+Analyzing: https://en.wikipedia.org/wiki/Java
+Process 1: Analyzing 13/19 - https://en.wikipedia.org/wiki/Gorontalo_(city)
+Analyzing: https://en.wikipedia.org/wiki/Gorontalo_(city)
+Process 0: Analyzing 13/19 - https://en.wikipedia.org/wiki/West_Java
+Analyzing: https://en.wikipedia.org/wiki/West_Java
+Process 1: Analyzing 14/19 - https://en.wikipedia.org/wiki/West_Sulawesi
+Analyzing: https://en.wikipedia.org/wiki/West_Sulawesi
+Process 1: Analyzing 15/19 - https://en.wikipedia.org/wiki/Mamuju_(city)
+Analyzing: https://en.wikipedia.org/wiki/Mamuju_(city)
+Process 0: Analyzing 14/19 - https://en.wikipedia.org/wiki/Central_Java
+Analyzing: https://en.wikipedia.org/wiki/Central_Java
+Process 1: Analyzing 16/19 - https://en.wikipedia.org/wiki/Maluku_(province)
+Analyzing: https://en.wikipedia.org/wiki/Maluku_(province)
+Process 0: Analyzing 15/19 - https://en.wikipedia.org/wiki/Special_Region_of_Yogyakarta
+Analyzing: https://en.wikipedia.org/wiki/Special_Region_of_Yogyakarta
+Process 1: Analyzing 17/19 - https://en.wikipedia.org/wiki/Papua_(province)
+Analyzing: https://en.wikipedia.org/wiki/Papua_(province)
+Process 0: Analyzing 16/19 - https://en.wikipedia.org/wiki/Yogyakarta_(city)
+Analyzing: https://en.wikipedia.org/wiki/Yogyakarta_(city)
+Process 1: Analyzing 18/19 - https://en.wikipedia.org/wiki/West_Papua_(province)
+Analyzing: https://en.wikipedia.org/wiki/West_Papua_(province)
+Process 0: Analyzing 17/19 - https://en.wikipedia.org/wiki/East_Java
+Analyzing: https://en.wikipedia.org/wiki/East_Java
+Process 1: Analyzing 19/19 - https://en.wikipedia.org/wiki/South_Papua
+Analyzing: https://en.wikipedia.org/wiki/South_Papua
+Process 0: Analyzing 18/19 - https://en.wikipedia.org/wiki/Bali
+Analyzing: https://en.wikipedia.org/wiki/Bali
+Process 0: Analyzing 19/19 - https://en.wikipedia.org/wiki/Mataram_(city)
+Analyzing: https://en.wikipedia.org/wiki/Mataram_(city)
+
+================================================================================
+ANALYSIS COMPLETE - 38 provinces analyzed
+Execution time: 18.63 seconds
+MPI processes: 2
+================================================================================
+
+Province: Aceh
+Best Section: Introduction — Score: 401
+>>> Introduction: I=36, T=8, R=357, Score=401
+
+Province: Banda Aceh
+Best Section: Introduction — Score: 163
+>>> Introduction: I=38, T=7, R=118, Score=163
+
+Province: Sumatra
+Best Section: Introduction — Score: 228
+>>> Introduction: I=42, T=9, R=177, Score=228
+
+Province: North Sumatra
+Best Section: Introduction — Score: 285
+>>> Introduction: I=80, T=15, R=190, Score=285
+
+Province: West Sumatra
+Best Section: Introduction — Score: 363
+>>> Introduction: I=53, T=8, R=302, Score=363
+
+Province: Jambi (city)
+Best Section: Introduction — Score: 64
+>>> Introduction: I=29, T=10, R=25, Score=64
+
+Province: South Sumatra
+Best Section: Introduction — Score: 222
+>>> Introduction: I=29, T=5, R=188, Score=222
+
+Province: Bengkulu (city)
+Best Section: Introduction — Score: 75
+>>> Introduction: I=22, T=7, R=46, Score=75
+
+Province: Jakarta
+Best Section: Introduction — Score: 886
+>>> Introduction: I=129, T=23, R=734, Score=886
+
+Province: Central Jakarta
+Best Section: Introduction — Score: 53
+>>> Introduction: I=14, T=5, R=34, Score=53
+
+Province: East Jakarta
+Best Section: Introduction — Score: 41
+>>> Introduction: I=12, T=4, R=25, Score=41
+
+Province: Java
+Best Section: Introduction — Score: 387
+>>> Introduction: I=50, T=9, R=328, Score=387
+
+Province: West Java
+Best Section: Introduction — Score: 210
+>>> Introduction: I=75, T=10, R=125, Score=210
+
+Province: Central Java
+Best Section: Introduction — Score: 299
+>>> Introduction: I=124, T=10, R=165, Score=299
+
+Province: Special Region of Yogyakarta
+Best Section: Introduction — Score: 120
+>>> Introduction: I=25, T=6, R=89, Score=120
+
+Province: Yogyakarta
+Best Section: Introduction — Score: 202
+>>> Introduction: I=63, T=12, R=127, Score=202
+
+Province: East Java
+Best Section: Introduction — Score: 267
+>>> Introduction: I=56, T=8, R=203, Score=267
+
+Province: Bali
+Best Section: Introduction — Score: 581
+>>> Introduction: I=58, T=6, R=517, Score=581
+
+Province: Mataram (city)
+Best Section: Introduction — Score: 63
+>>> Introduction: I=25, T=8, R=30, Score=63
+
+Province: West Kalimantan
+Best Section: Introduction — Score: 131
+>>> Introduction: I=20, T=13, R=98, Score=131
+
+Province: Kalimantan
+Best Section: Introduction — Score: 84
+>>> Introduction: I=17, T=12, R=55, Score=84
+
+Province: Central Kalimantan
+Best Section: Introduction — Score: 161
+>>> Introduction: I=37, T=12, R=112, Score=161
+
+Province: South Kalimantan
+Best Section: Introduction — Score: 353
+>>> Introduction: I=42, T=12, R=299, Score=353
+
+Province: East Kalimantan
+Best Section: Introduction — Score: 155
+>>> Introduction: I=27, T=12, R=116, Score=155
+
+Province: North Kalimantan
+Best Section: Introduction — Score: 85
+>>> Introduction: I=12, T=10, R=63, Score=85
+
+Province: North Sulawesi
+Best Section: Introduction — Score: 64
+>>> Introduction: I=19, T=10, R=35, Score=64
+
+Province: Sulawesi
+Best Section: Introduction — Score: 354
+>>> Introduction: I=29, T=8, R=317, Score=354
+
+Province: Central Sulawesi
+Best Section: Introduction — Score: 224
+>>> Introduction: I=29, T=6, R=189, Score=224
+
+Province: South Sulawesi
+Best Section: Introduction — Score: 129
+>>> Introduction: I=25, T=5, R=99, Score=129
+
+Province: Southeast Sulawesi
+Best Section: Introduction — Score: 57
+>>> Introduction: I=10, T=6, R=41, Score=57
+
+Province: Gorontalo
+Best Section: Introduction — Score: 152
+>>> Introduction: I=22, T=6, R=124, Score=152
+
+Province: Gorontalo (city)
+Best Section: Introduction — Score: 204
+>>> Introduction: I=21, T=7, R=176, Score=204
+
+Province: West Sulawesi
+Best Section: Introduction — Score: 83
+>>> Introduction: I=10, T=6, R=67, Score=83
+
+Province: Mamuju (city)
+Best Section: Introduction — Score: 26
+>>> Introduction: I=16, T=6, R=4, Score=26
+
+Province: Maluku (province)
+Best Section: Introduction — Score: 202
+>>> Introduction: I=16, T=8, R=178, Score=202
+
+Province: Papua (province)
+Best Section: Introduction — Score: 230
+>>> Introduction: I=34, T=11, R=185, Score=230
+
+Province: West Papua (province)
+Best Section: Introduction — Score: 365
+>>> Introduction: I=23, T=9, R=333, Score=365
+
+Province: South Papua
+Best Section: Introduction — Score: 322
+>>> Introduction: I=36, T=5, R=281, Score=322
+
+================================================================================
+PERFORMANCE SUMMARY
+Total execution time: 18.63 seconds
+Average time per province: 0.49 seconds
+Processes used: 2
+================================================================================
