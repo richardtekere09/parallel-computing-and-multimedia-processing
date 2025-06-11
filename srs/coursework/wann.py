@@ -1,13 +1,11 @@
 import numpy as np
-import gym
+import gymnasium as gym
 import networkx as nx
 from typing import List, Tuple
 import random
-try:
-    from opencl_utils import OpenCLAccelerator
-    OPENCL_AVAILABLE = True
-except ImportError:
-    OPENCL_AVAILABLE = False
+
+# Disable OpenCL for CPU-only execution
+OPENCL_AVAILABLE = False
 
 class WANNGenome:
     """Weight Agnostic Neural Network Genome"""
@@ -80,19 +78,12 @@ class WANNGenome:
     
     def forward_pass(self, inputs: np.ndarray, shared_weight: float = 1.0) -> np.ndarray:
         """Execute forward pass with shared weight"""
-        if OPENCL_AVAILABLE and hasattr(self, 'cl_accelerator'):
-            return self._forward_pass_opencl(inputs, shared_weight)
-        else:
-            return self._forward_pass_cpu(inputs, shared_weight)
-    
-    def _forward_pass_cpu(self, inputs: np.ndarray, shared_weight: float) -> np.ndarray:
-        """CPU-based forward pass"""
+        inputs = np.array(inputs, dtype=np.float32)
         node_values = {}
         
         # Set input values
-        for i, val in enumerate(inputs):
-            if i < self.input_size:
-                node_values[i] = val
+        for i in range(min(len(inputs), self.input_size)):
+            node_values[i] = float(inputs[i])
         
         # Process nodes in layer order
         sorted_nodes = sorted(self.nodes.items(), key=lambda x: x[1][0])
@@ -105,15 +96,15 @@ class WANNGenome:
             total_input = 0.0
             for (src, dst), enabled in self.connections.items():
                 if dst == node_id and enabled and src in node_values:
-                    total_input += node_values[src] * shared_weight
+                    total_input += float(node_values[src]) * shared_weight
             
             # Apply activation function
             if activation == 'tanh':
                 node_values[node_id] = np.tanh(total_input)
             elif activation == 'relu':
-                node_values[node_id] = max(0, total_input)
+                node_values[node_id] = max(0.0, total_input)
             elif activation == 'sigmoid':
-                node_values[node_id] = 1 / (1 + np.exp(-np.clip(total_input, -500, 500)))
+                node_values[node_id] = 1.0 / (1.0 + np.exp(-np.clip(total_input, -500, 500)))
             else:  # linear
                 node_values[node_id] = total_input
         
@@ -121,13 +112,13 @@ class WANNGenome:
         outputs = []
         for i in range(self.output_size):
             output_id = self.input_size + i
-            outputs.append(node_values.get(output_id, 0.0))
+            outputs.append(float(node_values.get(output_id, 0.0)))
         
-        return np.array(outputs)
+        return np.array(outputs, dtype=np.float32)
     
     def evaluate_fitness(self, trials: int = 3) -> float:
-        """Evaluate fitness across multiple weight values"""
-        env = gym.make('BipedalWalker-v3')
+        """Evaluate fitness on CartPole"""
+        env = gym.make('CartPole-v1')
         
         # Test with different shared weights
         weight_values = [-2, -1, -0.5, 0.5, 1, 2]
@@ -136,13 +127,22 @@ class WANNGenome:
         for weight in weight_values:
             for trial in range(trials):
                 obs = env.reset()
+                if isinstance(obs, tuple):  # Handle new gym API
+                    obs = obs[0]
                 episode_reward = 0
                 
-                for step in range(1600):  # Max episode length
+                for step in range(500):  # Max episode length
                     action = self.forward_pass(obs, weight)
-                    action = np.clip(action, -1, 1)  # Clip to valid range
+                    # Convert to discrete action (0 or 1)
+                    action_discrete = 1 if len(action) > 1 and action[1] > action[0] else 0
                     
-                    obs, reward, done, _ = env.step(action)
+                    step_result = env.step(action_discrete)
+                    if len(step_result) == 5:  # New gym API
+                        obs, reward, terminated, truncated, _ = step_result
+                        done = terminated or truncated
+                    else:  # Old gym API
+                        obs, reward, done, _ = step_result
+                    
                     episode_reward += reward
                     
                     if done:
@@ -153,6 +153,7 @@ class WANNGenome:
         env.close()
         self.fitness = total_reward / (len(weight_values) * trials)
         return self.fitness
+
 
 class WANNPopulation:
     """Population manager for WANN evolution"""
@@ -168,15 +169,6 @@ class WANNPopulation:
         for _ in range(pop_size):
             genome = WANNGenome(input_size, output_size)
             self.population.append(genome)
-        
-        # Setup OpenCL if available
-        if OPENCL_AVAILABLE:
-            try:
-                self.cl_accelerator = OpenCLAccelerator()
-                for genome in self.population:
-                    genome.cl_accelerator = self.cl_accelerator
-            except Exception as e:
-                print(f"OpenCL initialization failed: {e}")
     
     def get_individuals(self) -> List[WANNGenome]:
         """Get current population for evaluation"""

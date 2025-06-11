@@ -1,5 +1,5 @@
 import neat
-import gym
+import gymnasium as gym
 import numpy as np
 import pickle
 from mpi4py import MPI

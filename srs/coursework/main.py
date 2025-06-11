@@ -29,7 +29,7 @@ def run_wann_experiment(comm, rank, size, logger):
     
     if rank == 0:
         # Master process
-        population = WANNPopulation(pop_size=100, input_size=24, output_size=4)
+        population = WANNPopulation(pop_size=100, input_size=4, output_size=2)
         best_fitness_history = []
         start_time = time.time()
         

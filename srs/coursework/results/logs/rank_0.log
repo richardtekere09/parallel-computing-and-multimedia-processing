@@ -1,0 +1,58 @@
+2025-06-11 10:21:03,105 - neuroevo_rank_0 - INFO - Starting WANN experiment on rank 0
+2025-06-11 10:50:10,947 - neuroevo_rank_0 - INFO - Starting WANN experiment on rank 0
+2025-06-11 10:57:53,025 - neuroevo_rank_0 - INFO - Starting WANN experiment on rank 0
+2025-06-11 10:58:17,473 - neuroevo_rank_0 - INFO - Starting WANN experiment on rank 0
+2025-06-11 11:00:59,329 - neuroevo_rank_0 - INFO - Starting WANN experiment on rank 0
+2025-06-11 11:05:13,317 - neuroevo_rank_0 - INFO - Starting WANN experiment on rank 0
+2025-06-11 11:05:13,746 - neuroevo_rank_0 - INFO - Generation 0: Best=9.833, Time=0.43s
+2025-06-11 11:05:14,461 - neuroevo_rank_0 - INFO - Generation 1: Best=254.389, Time=0.71s
+2025-06-11 11:05:16,477 - neuroevo_rank_0 - INFO - Generation 2: Best=267.611, Time=2.01s
+2025-06-11 11:05:22,387 - neuroevo_rank_0 - INFO - Generation 3: Best=306.722, Time=5.91s
+2025-06-11 11:05:33,603 - neuroevo_rank_0 - INFO - Generation 4: Best=340.722, Time=11.22s
+2025-06-11 11:05:44,527 - neuroevo_rank_0 - INFO - Generation 5: Best=374.667, Time=10.92s
+2025-06-11 11:05:54,662 - neuroevo_rank_0 - INFO - Generation 6: Best=405.722, Time=10.13s
+2025-06-11 11:06:06,484 - neuroevo_rank_0 - INFO - Generation 7: Best=416.556, Time=11.82s
+2025-06-11 11:06:19,780 - neuroevo_rank_0 - INFO - Generation 8: Best=422.222, Time=13.29s
+2025-06-11 11:06:33,214 - neuroevo_rank_0 - INFO - Generation 9: Best=422.222, Time=13.43s
+2025-06-11 11:06:47,326 - neuroevo_rank_0 - INFO - Generation 10: Best=424.833, Time=14.11s
+2025-06-11 11:07:01,940 - neuroevo_rank_0 - INFO - Generation 11: Best=422.056, Time=14.61s
+2025-06-11 11:07:16,697 - neuroevo_rank_0 - INFO - Generation 12: Best=427.611, Time=14.76s
+2025-06-11 11:07:31,050 - neuroevo_rank_0 - INFO - Generation 13: Best=424.389, Time=14.35s
+2025-06-11 11:07:46,037 - neuroevo_rank_0 - INFO - Generation 14: Best=428.667, Time=14.99s
+2025-06-11 11:08:04,030 - neuroevo_rank_0 - INFO - Generation 15: Best=429.389, Time=17.99s
+2025-06-11 11:08:19,927 - neuroevo_rank_0 - INFO - Generation 16: Best=429.111, Time=15.90s
+2025-06-11 11:08:37,884 - neuroevo_rank_0 - INFO - Generation 17: Best=447.222, Time=17.96s
+2025-06-11 11:08:54,109 - neuroevo_rank_0 - INFO - Generation 18: Best=472.778, Time=16.22s
+2025-06-11 11:09:14,042 - neuroevo_rank_0 - INFO - Generation 19: Best=476.333, Time=19.93s
+2025-06-11 11:09:35,223 - neuroevo_rank_0 - INFO - Generation 20: Best=500.000, Time=21.18s
+2025-06-11 11:09:57,927 - neuroevo_rank_0 - INFO - Generation 21: Best=500.000, Time=22.70s
+2025-06-11 11:10:17,528 - neuroevo_rank_0 - INFO - Generation 22: Best=500.000, Time=19.60s
+2025-06-11 11:10:41,796 - neuroevo_rank_0 - INFO - Generation 23: Best=500.000, Time=24.27s
+2025-06-11 11:11:12,060 - neuroevo_rank_0 - INFO - Generation 24: Best=500.000, Time=30.26s
+2025-06-11 11:11:37,278 - neuroevo_rank_0 - INFO - Generation 25: Best=500.000, Time=25.22s
+2025-06-11 11:12:02,163 - neuroevo_rank_0 - INFO - Generation 26: Best=500.000, Time=24.88s
+2025-06-11 11:12:28,445 - neuroevo_rank_0 - INFO - Generation 27: Best=500.000, Time=26.28s
+2025-06-11 11:12:57,453 - neuroevo_rank_0 - INFO - Generation 28: Best=500.000, Time=29.00s
+2025-06-11 11:13:24,954 - neuroevo_rank_0 - INFO - Generation 29: Best=500.000, Time=27.50s
+2025-06-11 11:13:49,561 - neuroevo_rank_0 - INFO - Generation 30: Best=500.000, Time=24.60s
+2025-06-11 11:14:15,002 - neuroevo_rank_0 - INFO - Generation 31: Best=500.000, Time=25.44s
+2025-06-11 11:14:40,366 - neuroevo_rank_0 - INFO - Generation 32: Best=500.000, Time=25.36s
+2025-06-11 11:15:05,152 - neuroevo_rank_0 - INFO - Generation 33: Best=500.000, Time=24.78s
+2025-06-11 11:15:31,347 - neuroevo_rank_0 - INFO - Generation 34: Best=500.000, Time=26.19s
+2025-06-11 11:15:57,641 - neuroevo_rank_0 - INFO - Generation 35: Best=500.000, Time=26.29s
+2025-06-11 11:16:22,160 - neuroevo_rank_0 - INFO - Generation 36: Best=500.000, Time=24.52s
+2025-06-11 11:16:47,821 - neuroevo_rank_0 - INFO - Generation 37: Best=500.000, Time=25.66s
+2025-06-11 11:17:13,054 - neuroevo_rank_0 - INFO - Generation 38: Best=500.000, Time=25.23s
+2025-06-11 11:17:39,199 - neuroevo_rank_0 - INFO - Generation 39: Best=500.000, Time=26.14s
+2025-06-11 11:18:04,657 - neuroevo_rank_0 - INFO - Generation 40: Best=500.000, Time=25.45s
+2025-06-11 11:18:29,581 - neuroevo_rank_0 - INFO - Generation 41: Best=500.000, Time=24.92s
+2025-06-11 11:18:57,445 - neuroevo_rank_0 - INFO - Generation 42: Best=500.000, Time=27.86s
+2025-06-11 11:19:35,332 - neuroevo_rank_0 - INFO - Generation 43: Best=500.000, Time=37.88s
+2025-06-11 11:20:00,819 - neuroevo_rank_0 - INFO - Generation 44: Best=500.000, Time=25.48s
+2025-06-11 11:20:36,915 - neuroevo_rank_0 - INFO - Generation 45: Best=500.000, Time=36.09s
+2025-06-11 11:21:11,277 - neuroevo_rank_0 - INFO - Generation 46: Best=500.000, Time=34.36s
+2025-06-11 11:21:37,236 - neuroevo_rank_0 - INFO - Generation 47: Best=500.000, Time=25.96s
+2025-06-11 11:50:09,508 - neuroevo_rank_0 - INFO - Generation 48: Best=500.000, Time=1712.27s
+2025-06-11 14:22:06,984 - neuroevo_rank_0 - INFO - Generation 49: Best=500.000, Time=9117.47s
+2025-06-11 14:22:06,989 - neuroevo_rank_0 - INFO - WANN experiment completed in 11813.67 seconds
+2025-06-11 14:22:07,019 - neuroevo_rank_0 - INFO - Starting NEAT experiment on rank 0
