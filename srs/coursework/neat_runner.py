@@ -1,3 +1,4 @@
+import os
 import neat
 import gymnasium as gym
 import numpy as np
@@ -6,21 +7,61 @@ from mpi4py import MPI
 from typing import List, Tuple
 import logging
 
+# -----------------------------------------------------------
+#  Logging destination (edit if you move the repo)
+# -----------------------------------------------------------
+LOG_DIR = (
+    "/Users/richard/parallel-computing-and-multimedia-processing/"
+    "srs/coursework/results/logs"
+)
+os.makedirs(LOG_DIR, exist_ok=True)          # make sure the path exists
+
+
 class NEATRunner:
     """Parallel NEAT evolution runner"""
-    
+
     def __init__(self, comm, rank: int, size: int):
         self.comm = comm
         self.rank = rank
         self.size = size
-        self.logger = logging.getLogger(f'neat_rank_{rank}')
-        
+
+        # ---------- logging ---------------------------------
+        self.logger = logging.getLogger(f"neat_rank_{rank}")
+        self.logger.setLevel(logging.INFO)
+
+        # file log for every rank
+        fh = logging.FileHandler(
+            os.path.join(LOG_DIR, f"neat_rank_{rank}.log"), mode="a"
+        )
+        fh.setFormatter(
+            logging.Formatter(
+                "%(asctime)s [%(levelname)s] %(name)s: %(message)s",
+                datefmt="%Y-%m-%d %H:%M:%S",
+            )
+        )
+        self.logger.addHandler(fh)
+
+        # optional console output only on master
+        if rank == 0:
+            ch = logging.StreamHandler()
+            ch.setFormatter(
+                logging.Formatter(
+                    "%(asctime)s [%(levelname)s] %(name)s: %(message)s",
+                    datefmt="%H:%M:%S",
+                )
+            )
+            self.logger.addHandler(ch)
+
+
         # NEAT configuration
-        self.config = neat.Config(neat.DefaultGenome,
-                                  neat.DefaultReproduction,
-                                  neat.DefaultSpeciesSet,
-                                  neat.DefaultStagnation,
-                                  'config/neat_config.txt')
+        self.config = neat.Config(
+            neat.DefaultGenome,
+            neat.DefaultReproduction,
+            neat.DefaultSpeciesSet,
+            neat.DefaultStagnation,
+            "config/neat_config.txt",
+        )
+
     
     def evaluate_genome(self, genome, config) -> float:
         """Evaluate a single NEAT genome"""
@@ -31,14 +72,16 @@ class NEATRunner:
         trials = 3
         
         for trial in range(trials):
-            obs = env.reset()
+            obs, info = env.reset()  # gymnasium returns (obs, info)
             episode_reward = 0
             
             for step in range(1600):
                 action = net.activate(obs)
                 action = np.clip(action, -1, 1)
                 
-                obs, reward, done, _ = env.step(action)
+                # gymnasium returns (obs, reward, terminated, truncated, info)
+                obs, reward, terminated, truncated, info = env.step(action)
+                done = terminated or truncated
                 episode_reward += reward
                 
                 if done:
@@ -112,7 +155,16 @@ class NEATRunner:
                 pickle.dump(best_genome, f)
             
             # Save fitness statistics
-            fitness_history = [stats.get_fitness_mean() for _ in range(generations)]
+            fitness_history = []
+            for i in range(generations):
+                try:
+                    if i < len(stats.get_fitness_mean()):
+                        fitness_history.append(stats.get_fitness_mean()[i])
+                    else:
+                        fitness_history.append(0)
+                except:
+                    fitness_history.append(0)
+            
             np.savetxt('results/neat_fitness.csv', fitness_history, delimiter=',')
             
             self.logger.info(f"NEAT evolution completed. Best fitness: {best_genome.fitness}")

@@ -29,7 +29,7 @@ def run_wann_experiment(comm, rank, size, logger):
     
     if rank == 0:
         # Master process
-        population = WANNPopulation(pop_size=100, input_size=4, output_size=2)
+        population = WANNPopulation(pop_size=30, input_size=24, output_size=4)
         best_fitness_history = []
         start_time = time.time()
         
@@ -37,6 +37,7 @@ def run_wann_experiment(comm, rank, size, logger):
             gen_start = time.time()
             
             # Distribute population for evaluation
+
             individuals = population.get_individuals()
             chunk_size = len(individuals) // size
             
@@ -75,7 +76,7 @@ def run_wann_experiment(comm, rank, size, logger):
         
     else:
         # Worker process
-        for generation in range(50):
+        for generation in range(30):
             # Receive individuals to evaluate
             individuals = comm.recv(source=0, tag=0)
             
@@ -93,7 +94,7 @@ def run_neat_experiment(comm, rank, size, logger):
     logger.info(f"Starting NEAT experiment on rank {rank}")
     
     neat_runner = NEATRunner(comm, rank, size)
-    neat_runner.run_evolution(generations=50)
+    neat_runner.run_evolution(generations=30)
 
 def main():
     comm = MPI.COMM_WORLD
