@@ -54,9 +54,9 @@ class NetworkVisualizer:
     def plot_performance_scaling(self):
         """Plot parallel performance scaling results"""
         # Simulated performance data (replace with actual measurements)
-        processes = np.array([1, 2, 4, 6, 8])
-        speedup_wann = np.array([1.0, 1.8, 3.2, 4.1, 4.8])
-        speedup_neat = np.array([1.0, 1.9, 3.4, 4.5, 5.2])
+        processes = np.array([1, 2, 4, 6, ])
+        speedup_wann = np.array([1.0, 1.8, 3.2, 4.1, ])
+        speedup_neat = np.array([1.0, 1.9, 3.4, 4.5, ])
         efficiency_wann = speedup_wann / processes
         efficiency_neat = speedup_neat / processes
         
